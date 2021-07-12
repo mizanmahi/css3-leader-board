@@ -50,7 +50,7 @@ hr {
 
 .players {
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
    grid-row-gap: 30px;
    margin-bottom: 30px;
 }
@@ -70,7 +70,7 @@ hr {
 /* top blog css */
 .blogs {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
+   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
    grid-row-gap: 25px;
 }
 .blogs .blog {
@@ -89,23 +89,97 @@ hr {
 }
 .blog-author {
    color: #9f9f9f;
+
 }
 .blog-author a {
    color: var(--color-primary);
    font-size: 16px;
+   text-decoration: none;
 }
 
 /* courses css */
 
+.course {
+   box-shadow: 0 5px 15px rgba(15, 10, 10, 0.1);
+   padding: 12px;
+   border-radius: 15px;
+}
+
 .courses {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-column-gap: 25px;
 }
-.couerses .course{}
-.course__thumbnail{}
+
 .course__thumbnail img{
-    width: 224px;
-    height: 104px;
+    width: 100%;
+    margin-bottom: 20px;
 }
-.course__details{}
+
+.course-title {
+   color: #1E1E1E;
+   font-size: 20px;
+   margin-bottom: 12px;
+}
+.course-author {
+   color: #ED6B4F;
+   font-size: 15px;
+}
+
+.course__info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 16px;
+}
+
+.course-ratings i {
+   font-size: 12px;
+   color: #FFC014;
+}
+.course-ratings i.blank {
+   color: #AEAEAE;
+   opacity: .5;
+}
+
+.course-ratings span {
+   color: #A2A2A2;
+   font-size: 15px;
+   margin-left: 11px;
+}
+.course-duration {
+   color: #ff4a60;
+   background: #FFE4E8;
+   font-size: 15px;
+   padding: 6px 7px;
+   border-radius: 15px;
+}
+
+/* ----------------------------
+Media queries for small devices
+-----------------------------*/
+
+/* for phones */
+
+@media only screen and (max-width: 688px){
+   .container {
+      width: 100%;
+   }
+   .players .player {
+      justify-content: center;
+   }
+   .course {
+      margin-bottom: 1rem;
+   }
+}
+
+/* for tablet */
+
+@media only screen and (min-width: 689px) and (max-width: 992px){
+   .container {
+      width: 90%;
+   }
+   .players .player {
+      justify-content: center;
+   }
+}
