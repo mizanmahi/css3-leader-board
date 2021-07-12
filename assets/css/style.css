@@ -1,0 +1,111 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+/* custom peoperties */
+:root {
+   --color-primary: #562eff;
+}
+
+/* base styles  */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+body {
+   font-family: "Poppins", sans-serif;
+   box-sizing: border-box;
+   background: #e5e5e5;
+}
+
+main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* reusable classes */
+.container {
+   width: 870px;
+   background: #ffffff;
+   padding: 30px;
+   border-radius: 5px;
+   margin-top: 21px;
+}
+
+.section-title {
+   font-size: 24px;
+   color: var(--color-primary);
+   margin: 10px 0 40px;
+}
+
+/* utils */
+hr {
+    border-top: 1px solid #d1d1d1;
+    margin-bottom: 30px;
+ }
+
+/* top players css */
+
+.players {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-row-gap: 30px;
+   margin-bottom: 30px;
+}
+.players .player {
+   display: flex;
+   align-items: center;
+}
+.player__img {
+   width: 56px;
+   height: 56px;
+}
+.player__name {
+   font-size: 18px;
+   margin-left: 16px;
+}
+
+/* top blog css */
+.blogs {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-row-gap: 25px;
+}
+.blogs .blog {
+   display: flex;
+   align-items: center;
+}
+.blog__thumbnail img {
+   width: 177px;
+   height: 117px;
+}
+.blog__details {
+   margin-left: 16px;
+}
+.blog-title {
+   font-size: 20px;
+}
+.blog-author {
+   color: #9f9f9f;
+}
+.blog-author a {
+   color: var(--color-primary);
+   font-size: 16px;
+}
+
+/* courses css */
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+}
+.couerses .course{}
+.course__thumbnail{}
+.course__thumbnail img{
+    width: 224px;
+    height: 104px;
+}
+.course__details{}
